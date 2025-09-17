@@ -1,57 +1,146 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MITHRAN M S | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mithran MS - Portfolio</title>
+  <link rel="stylesheet" href="ab.css" />
 </head>
 <body>
-  <header>
-    <h1>MITHRAN M S</h1>
-    <p>Web Developer | Programmer | Tech Enthusiast</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hi! I'm a passionate web developer who loves building beautiful and functional websites. I specialize in HTML, CSS, JavaScript, and modern frameworks like React.</p>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <img src="profile.jpg" alt="Mithran MS" class="profile-photo" />
+    <h1>Mithran MS</h1>
+    <p>Full Stack Developer</p>
+    <hr />
+    <h3>Contact</h3>
+    <p>📞 +91 7994697789</p>
+    <p>📧 mithranms007@gmail.com</p>
+    <p>📍 Arrassummodu 695583</p>
+    <nav>
+      <a href="#profile">Profile</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <section id="profile">
+      <h2>Profile Summary</h2>
+      <p>
+        I am an enthusiastic and detail-oriented Full Stack Developer proficient in JavaScript, React, Node.js, and MongoDB. With hands-on experience through my internships, I've developed user-friendly web applications and refined various projects, showcasing my ability to leverage modern web technologies effectively.
+      </p>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>Project One</h3>
-          <p>A short description of your project goes here.</p>
-          <a href="https://github.com/yourusername/project-one" target="_blank">Code</a> |
-          <a href="https://your-live-demo-link.com" target="_blank">Live Demo</a>
+    <section id="education">
+      <h2>Education</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>CPTC Vattiyoorkavu</h3>
+          <p>Computer Engineering (2019–2022)</p>
+          <p>CGPA: 7.29</p>
         </div>
-        <div class="project-card">
-          <h3>Project Two</h3>
-          <p>Another project with some cool features.</p>
-          <a href="https://github.com/yourusername/project-two" target="_blank">Code</a> |
-          <a href="https://your-live-demo-link.com" target="_blank">Live Demo</a>
+        <div class="card">
+          <h3>GHSS Kulathoor</h3>
+          <p>High School (2017–2019)</p>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">@yourusername</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Your LinkedIn</a></p>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>MongoDB</li>
+      </ul>
     </section>
+
+
+    <section id="skills">
+      <h3 class="L1"> Languages</h3>
+      <p class="L2">English, Malayalam, Hindi</p>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Sports Events Website</h3>
+          <p>Developed a complete website for managing sports events, including coach registration and event views. Used MongoDB for storage and Node.js for backend.</p>
+        </div>
+        <div class="card">
+          <h3>Billing System</h3>
+          <p>Built an online/offline billing website to manage stock, bills, and pricing. Used HTML, CSS, JavaScript, and PHP for development.</p>
+        </div>
+      </div>
+
+      <!-- Optional Carousel -->
+      <div class="carousel-container">
+        <h3>Project Gallery</h3>
+        <div class="carousel">
+          <button class="prev">‹</button>
+          <div class="carousel-track">
+            <div class="carousel-item"><img src="work1.jpeg" alt="Project 1"></div>
+            <div class="carousel-item"><img src="work2.jpeg" alt="Project 2"></div>
+            <div class="carousel-item"><img src="work3.jpg" alt="Project 3"></div>
+          </div>
+          <button class="next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Work Experience</h2>
+      <div class="card">
+        <h3>Shrishti Innovative – Internship</h3>
+        <p>Role: MERN Stack Developer</p>
+        <p>Worked on full stack web applications using MongoDB, Express, React, and Node.js.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Mithran MS. All rights reserved.</p>
+    </footer>
   </main>
 
-  <footer>
-    <p>© 2025 Your Name. All rights reserved.</p>
-  </footer>
+  <!-- Carousel Script -->
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+    const width = 220;
+
+    let index = 0;
+
+    next.addEventListener('click', () => {
+      if (index < track.children.length - 1) index++;
+      track.style.transform = `translateX(-${index * width}px)`;
+    });
+
+    prev.addEventListener('click', () => {
+      if (index > 0) index--;
+      track.style.transform = `translateX(-${index * width}px)`;
+    });
+  </script>
+
 </body>
 </html>
