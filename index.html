@@ -194,15 +194,21 @@
       transition: transform 0.4s ease-in-out;
     }
 
-    .carousel-item {
-      min-width: 240px;
-      margin: 0 0.5rem;
-    }
+   .carousel-item {
+  min-width: 600px;
+  height: 600px; /* Fixed height */
+  margin: 0 0.5rem;
+  overflow: hidden; /* Prevents overflow */
+  border-radius: 8px;
+}
 
-    .carousel-item img {
-      width: 100%;
-      border-radius: 8px;
-    }
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures uniform size while cropping */
+  border-radius: 8px;
+}
+
 
     .prev, .next {
       background-color: #29b6f6;
@@ -350,9 +356,9 @@
           <div class="carousel-track">
             <div class="carousel-item"><img src="Teamcoachhomepage_3.png" alt="Project 1"></div>
             <div class="carousel-item"><img src="Teamcoachhomepage_4.png" alt="Project 2"></div>
-            <div class="carousel-item"><img src="Teamcoachhomepage_5.png" alt="Project 3"></div>
-             <div class="carousel-item"><img src="Teamcoachhomepage_6.png" alt="Project 1"></div>
-            <div class="carousel-item"><img src="Teamcoachhomepage_7.png" alt="Project 2"></div>
+            <div class="carousel-item"><img src="Teamcoachhomepage_5.jpeg" alt="Project 3"></div>
+             <div class="carousel-item"><img src="Teamcoachhomepage_6.jpeg" alt="Project 1"></div>
+            <div class="carousel-item"><img src="Teamcoachhomepage_7.jpeg" alt="Project 2"></div>
             <div class="carousel-item"><img src="landingpage3-4.png" alt="Project 3"></div>
           </div>
           <button class="next">›</button>
